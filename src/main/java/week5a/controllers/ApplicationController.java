@@ -16,9 +16,16 @@ public class ApplicationController {
     // This method, index(), serves as the site index - the default page
     // Requests for the root '/' will be handled by this method
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    @ResponseBody // Send a direct response without a view template
+    //@ResponseBody // Send a direct response without a view template
     public String index() {
         // Return some text (this will be the response back to the browser)
-        return "Hello World! This is the Home page";
+        //return "Hello World! This is the Home page";
+        return "index";
     }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String about() {
+        return "about";
+    }
+
 }
